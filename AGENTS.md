@@ -71,9 +71,9 @@
 
 ## STEP 5：公開準備
 - Gitはインストール済み。GitHub CLI（gh）は見つからなかった。
-- サイト専用フォルダーでGitを初期化済み。最初のブランチ名はmain。コミット（履歴への保存）はまだ行っていない。
+- サイト専用フォルダーでGitを初期化済み。ブランチ名はmain。初回コミットとGitHubへのpushが完了し、origin/mainを追跡中。
 - `.gitignore` を追加。編集用sb3はローカルに保存したままGitの管理対象から除外し、変換後HTMLと画像を管理する。
 - GitHubユーザー名は `maru0720`、リポジトリ名は `asobi-no-tana` とユーザーが了承済み。
 - ユーザーがGitHubへログイン済み。公開リポジトリ `https://github.com/maru0720/asobi-no-tana` を作成し、空のリポジトリであることを確認済み。
 - 接続先は `https://github.com/maru0720/asobi-no-tana.git`。
-- リモートへの送信と公開は未実施。
+- GitHubへのファイル送信は完了。GitHub Pagesの有効化と一般公開はまだ行っていない。
