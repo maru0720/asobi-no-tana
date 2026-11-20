@@ -1,0 +1,9 @@
+# 編集用のScratch原本はPCに残し、公開用リポジトリには含めません。
+*.sb3
+
+# OSの一時ファイルとローカル設定
+Thumbs.db
+.DS_Store
+*.log
+.env
+.env.*

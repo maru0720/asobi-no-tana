@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>キッズＧＯサバイバー | 遊びの棚</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header class="site-header container">
+    <p class="site-name">遊びの棚</p>
+  </header>
+  <main class="container">
+    <a class="back-link" href="./index.html">ゲーム一覧に戻る</a>
+    <h1>キッズＧＯサバイバー</h1>
+    <p>なるべく長い時間生き残り、ハイスコアを目指すサバイバー系ゲームです。</p>
+    <p id="play-help">ゲーム画面の緑の旗をクリックして開始してください。</p>
+    <!-- iframeは、別のHTMLページをこのページの中に表示する要素です。 -->
+    <iframe
+      class="game-frame"
+      src="./games/survivor.html"
+      title="キッズＧＯサバイバーのプレイ画面"
+      aria-describedby="play-help"
+      allow="fullscreen"
+      allowfullscreen
+    ></iframe>
+    <p class="asset-credit">タイトル画像およびゲーム内の画像に生成AIを使用しています。</p>
+    <p class="game-fallback">ゲーム画面が表示されない場合は、<a href="./games/survivor.html">ゲームを直接開く</a>こともできます。</p>
+    <section aria-labelledby="controls-heading">
+      <h2 id="controls-heading">遊び方</h2>
+      <ul>
+        <li>プレイ中：方向キー（↑・↓・←・→）で移動します。</li>
+        <li>強化画面：マウスで強化内容を選択します。</li>
+      </ul>
+      <p>方向キーが反応しないときは、ゲーム画面を一度クリックしてから操作してください。</p>
+    </section>
+  </main>
+  <footer class="container"><p>遊びの棚</p></footer>
+</body>
+</html>
