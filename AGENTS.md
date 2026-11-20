@@ -31,7 +31,6 @@
 
 ## 未決定・未実施
 - カテゴリー・検索・並び替え・スマートフォン対応の具体的な仕様。
-- GitHubとの接続、公開設定。
 - Scratch作品・画像・音源などの公開条件は、掲載素材が決まった段階で確認する。
 
 ## STEP 2の決定と実装
@@ -76,4 +75,7 @@
 - GitHubユーザー名は `maru0720`、リポジトリ名は `asobi-no-tana` とユーザーが了承済み。
 - ユーザーがGitHubへログイン済み。公開リポジトリ `https://github.com/maru0720/asobi-no-tana` を作成し、空のリポジトリであることを確認済み。
 - 接続先は `https://github.com/maru0720/asobi-no-tana.git`。
-- GitHubへのファイル送信は完了。GitHub Pagesの有効化と一般公開はまだ行っていない。
+- GitHub Pagesを有効化し、一般公開済み。公開元はmainブランチの / (root)、Deploy from a branch。
+- 公開URL：`https://maru0720.github.io/asobi-no-tana/`
+- 初回公開処理（Actions run 44711526929）のSuccessを確認。公開URLで一覧・画像・生成AI注記・専用ページ・緑の旗からのゲーム起動・一覧に戻る操作を確認済み。
+- 方向キーでの操作や音声の詳細な確認は、公開版では未実施。
