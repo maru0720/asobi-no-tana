@@ -17,23 +17,23 @@ function getReadyPlayer() {
   }
 }
 
-function updateResetButton() {
-  resetButton.disabled = !getReadyPlayer();
-}
-
-gameFrame.addEventListener("load", updateResetButton);
-// iframeのload後も、ゲームデータの読み込みは続くため定期的に確認します。
-const readyCheck = window.setInterval(() => {
-  updateResetButton();
-  if (!resetButton.disabled) window.clearInterval(readyCheck);
-}, 300);
-updateResetButton();
+// 内部へのアクセス制限で、ボタンが無効のままにならないようにします。
+resetButton.disabled = false;
 
 resetButton.addEventListener("click", () => {
   const gameWindow = getReadyPlayer();
   if (!gameWindow) {
-    resetButton.disabled = true;
-    playerStatus.textContent = "ゲームの読み込み後に、ページを再読み込みしてください。";
+    try {
+      const loadingScreen = gameFrame.contentWindow.document.getElementById("loading");
+      if (loadingScreen && !loadingScreen.hidden) {
+        playerStatus.textContent = "ゲームを読み込んでいます。読み込み後に、もう一度押してください。";
+        return;
+      }
+    } catch {
+      // PC内のHTMLを直接開くと、iframe内部にアクセスできない場合があります。
+    }
+    gameFrame.src = gameFrame.getAttribute("src");
+    playerStatus.textContent = "ゲーム画面を読み込み直しています。表示された緑の旗を押して開始してください。";
     return;
   }
   // 開始前に押した場合も、中央の緑の旗をクリックしたときと同じ状態にします。
