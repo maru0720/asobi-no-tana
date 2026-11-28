@@ -53,3 +53,10 @@ a:focus-visible { outline: 3px solid #255b44; outline-offset: 4px; }
   background: #000;
 }
 .game-fallback { color: #526174; font-size: 0.9rem; }
+.player-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-block: 16px; }
+.player-controls span, .player-status { color: #526174; font-size: 0.875rem; }
+.reset-button { padding: 10px 20px; border: 1px solid #255b44; border-radius: 6px; background: #fff; color: #255b44; font: inherit; cursor: pointer; }
+.reset-button:hover:enabled { background: #edf3ef; }
+.reset-button:disabled { opacity: 0.55; cursor: wait; }
+.reset-button:focus-visible { outline: 3px solid #255b44; outline-offset: 4px; }
+.player-status:empty { display: none; }

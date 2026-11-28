@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>キッズＧＯサバイバー | 遊びの棚</title>
   <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/player.js" defer></script>
 </head>
 <body>
   <header class="site-header container">
@@ -15,6 +16,11 @@
     <h1>キッズＧＯサバイバー</h1>
     <p>なるべく長い時間生き残り、ハイスコアを目指すサバイバー系ゲームです。</p>
     <p id="play-help">ゲーム画面の緑の旗をクリックして開始してください。</p>
+    <div class="player-controls">
+      <button class="reset-button" id="reset-game" type="button" disabled>リセット</button>
+      <span>途中のプレイを終了して、緑の旗から再スタートします。</span>
+    </div>
+    <p id="player-status" class="player-status" role="status"></p>
     <!-- iframeは、別のHTMLページをこのページの中に表示する要素です。 -->
     <iframe
       class="game-frame"

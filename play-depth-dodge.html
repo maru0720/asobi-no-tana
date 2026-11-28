@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>奥行回避ゲーム | 遊びの棚</title>
   <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/player.js" defer></script>
 </head>
 <body>
   <header class="site-header container"><p class="site-name">遊びの棚</p></header>
@@ -13,6 +14,11 @@
     <h1>奥行回避ゲーム</h1>
     <p>左右に移動して、奥から迫る敵を避けるゲームです。</p>
     <p id="play-help">ゲーム画面の緑の旗をクリックして開始してください。</p>
+    <div class="player-controls">
+      <button class="reset-button" id="reset-game" type="button" disabled>リセット</button>
+      <span>途中のプレイを終了して、緑の旗から再スタートします。</span>
+    </div>
+    <p id="player-status" class="player-status" role="status"></p>
     <iframe class="game-frame" src="./games/depth-dodge.html" title="奥行回避ゲームのプレイ画面" aria-describedby="play-help" allow="fullscreen" allowfullscreen></iframe>
     <p class="game-fallback">ゲーム画面が表示されない場合は、<a href="./games/depth-dodge.html">ゲームを直接開く</a>こともできます。</p>
     <section aria-labelledby="controls-heading">
